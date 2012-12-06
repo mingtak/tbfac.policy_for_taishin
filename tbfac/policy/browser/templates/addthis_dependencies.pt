@@ -1,0 +1,7 @@
+<!-- AddThis Button BEGIN -->
+<tal:block tal:condition="view/available">
+<script type="text/javascript" tal:content="view/addthis_config_javascript">
+</script>
+<script type="text/javascript" tal:attributes="src view/javascript_url">
+</script>
+</tal:block>

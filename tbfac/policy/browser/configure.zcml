@@ -1,0 +1,36 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:cmf="http://namespaces.zope.org/cmf"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    i18n_domain="tbfac.policy">
+
+    <configure package="collective.addthis">
+    <browser:viewlet
+        name="collective.addthis"
+        for="Products.ATContentTypes.interfaces.news.IATNewsItem"
+        class="collective.addthis.addthis.AddThisViewlet"
+        manager="plone.app.layout.viewlets.interfaces.IBelowContentTitle"
+        template="addthis.pt"
+        permission="zope.Public"
+        layer="tbfac.policy.interfaces.ITBFACPolicyLayer"
+        />
+    </configure>
+
+    <browser:page
+        name="addthis_dependencies"
+        for="*"
+        class=".addthis.AddThisDependencies"
+        permission="zope.Public"
+        layer="tbfac.policy.interfaces.ITBFACPolicyLayer"
+        />
+
+    <browser:page
+        name="addthis_listing_item_buttons"
+        for="*"
+        class=".addthis.AddThisListingItemButtons"
+        permission="zope.Public"
+        layer="tbfac.policy.interfaces.ITBFACPolicyLayer"
+        />
+
+</configure>
