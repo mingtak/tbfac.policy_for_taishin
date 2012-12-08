@@ -91,6 +91,8 @@
                     </tal:newsitem>
                     </div>
 
+                    <div tal:replace="structure item_object/@@recommendations_macro|nothing" />
+
                     <div tal:replace="structure item_object/@@addthis_listing_item_buttons" />
 
                     <p class="tileBody" tal:condition="item_description">
