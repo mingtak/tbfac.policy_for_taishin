@@ -8,9 +8,9 @@
     <configure package="collective.addthis">
     <browser:viewlet
         name="collective.addthis"
-        for="Products.ATContentTypes.interfaces.news.IATNewsItem"
+        for="tbfac.content.info.IInfo"
         class="collective.addthis.addthis.AddThisViewlet"
-        manager="plone.app.layout.viewlets.interfaces.IBelowContentTitle"
+        manager="plone.app.layout.viewlets.interfaces.IAboveContentTitle"
         template="addthis.pt"
         permission="zope.Public"
         layer="tbfac.policy.interfaces.ITBFACPolicyLayer"
