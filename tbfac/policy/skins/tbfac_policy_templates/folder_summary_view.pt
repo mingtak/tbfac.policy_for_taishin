@@ -8,6 +8,20 @@
 
 <body>
 
+<metal:description fill-slot="content-description">
+<p style="float: right"
+ tal:define="navigation_root_url context/@@plone_portal_state/navigation_root_url;"
+ tal:condition="python: context.getId() == 'info'">
+<a href="#"
+   tal:attributes="href string:${navigation_root_url}/event/info/@@kml-openlayers">
+<img src="#"
+   tal:attributes="src string:${navigation_root_url}/++resource++tbfac.content/marker.png" />藝術動態地圖</a>
+</p>
+<div metal:use-macro="context/kss_generic_macros/macros/generic_description_view">
+Generic KSS Description. Is rendered with class="documentDescription".
+</div>
+</metal:description>
+<div class="visualClear"><!-- --></div>
     <metal:content-core fill-slot="content-core">
         <metal:block define-macro="listing" extend-macro="context/folder_listing/macros/content-core">
             <!-- we don't want the dl -->
