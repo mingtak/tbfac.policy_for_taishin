@@ -10,12 +10,11 @@
 
 <metal:description fill-slot="content-description">
 <p style="float: right"
- tal:define="navigation_root_url context/@@plone_portal_state/navigation_root_url;"
  tal:condition="python: context.getId() == 'info'">
 <a href="#"
-   tal:attributes="href string:${navigation_root_url}/event/info/@@kml-openlayers">
+   tal:attributes="href string:${portal_url}/event/info/@@kml-openlayers">
 <img src="#"
-   tal:attributes="src string:${navigation_root_url}/++resource++tbfac.content/marker.png" />藝術動態地圖</a>
+   tal:attributes="src string:${portal_url}/++resource++tbfac.content/marker.png" />藝術動態地圖</a>
 </p>
 <div metal:use-macro="context/kss_generic_macros/macros/generic_description_view">
 Generic KSS Description. Is rendered with class="documentDescription".
@@ -61,6 +60,13 @@ Generic KSS Description. Is rendered with class="documentDescription".
                         </a>
 
                     </h2>
+
+                    <tal:info>
+                        <span tal:content="item_object/startDate">Start Date</span>
+                        <span tal:condition="item_object/endDate"> -
+                        <span tal:replace="item_object/endDate" />
+                        </span>
+                    </tal:info>
 
                     <div class="documentByLine" tal:condition="python: site_properties.allowAnonymousViewAbout or not isAnon">
 
