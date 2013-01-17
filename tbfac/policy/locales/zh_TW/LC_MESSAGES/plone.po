@@ -1,0 +1,33 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Plone\n"
+"POT-Creation-Date: 2012-10-19 19:40+0000\n"
+"PO-Revision-Date: 2013-01-17 20:26+0800\n"
+"Last-Translator: TsungWei Hu <marr.tw@gmail.com>\n"
+"Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: zh-tw\n"
+"Language-Name: Traditional Chinese\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: plone\n"
+
+#. Default: "Used in item listings and search results."
+#: Archetypes/ExtensibleMetadata.py:97
+msgid "help_description"
+msgstr "可當作標題的補充文字。"
+
+#. Default: "Home page"
+#: CMFPlone/skins/plone_deprecated/personalize_form.cpt:212
+#: plone.app.users/plone/app/users/userdataschema.py:58
+msgid "label_homepage"
+msgstr "個人首頁"
+
+#. Default: "A short overview of who you are and what you do. Will be displayed on your author page, linked from the items you create."
+#: CMFPlone/skins/plone_deprecated/personalize_form.cpt:189
+#: plone.app.users/plone/app/users/userdataschema.py:66
+msgid "help_biography"
+msgstr "填寫的資訊，將被顯示在作者頁面，自己所建立的項目頁面上，則會有連結指到這個作者頁面。"
+
