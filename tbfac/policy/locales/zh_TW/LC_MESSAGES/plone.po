@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2012-10-19 19:40+0000\n"
-"PO-Revision-Date: 2013-01-17 20:26+0800\n"
+"POT-Creation-Date: 2013-01-31 14:40+0000\n"
+"PO-Revision-Date: 2013-01-31 22:56+0800\n"
 "Last-Translator: TsungWei Hu <marr.tw@gmail.com>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -30,4 +30,14 @@ msgstr "個人首頁"
 #: plone.app.users/plone/app/users/userdataschema.py:66
 msgid "help_biography"
 msgstr "填寫的資訊，將被顯示在作者頁面，自己所建立的項目頁面上，則會有連結指到這個作者頁面。"
+
+#. Default: "Previous: ${itemtitle}"
+#: plone.app.layout/plone/app/layout/nextprevious/nextprevious.pt:26
+msgid "label_previous_item"
+msgstr "上一篇: ${itemtitle}"
+
+#. Default: "Next: ${itemtitle}"
+#: plone.app.layout/plone/app/layout/nextprevious/nextprevious.pt:40
+msgid "label_next_item"
+msgstr "下一篇: ${itemtitle}"
 
