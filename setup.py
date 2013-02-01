@@ -26,7 +26,7 @@ setup(name='tbfac.policy',
       install_requires=[
           'setuptools',
           'collective.addthis',
-          # -*- Extra requirements: -*-
+          'collective.disqus',
       ],
       entry_points="""
       # -*- Entry points: -*-
