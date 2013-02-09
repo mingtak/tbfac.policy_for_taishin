@@ -12,9 +12,9 @@
 
   <genericsetup:registerProfile
       name="default"
-      title="tbfac.policy"
+      title="TBFAC Policy"
       directory="profiles/default"
-      description="Installs the tbfac.policy package"
+      description="Extension profile for TBFAC Policy"
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
   <!-- -*- extra stuff goes here -*- -->
