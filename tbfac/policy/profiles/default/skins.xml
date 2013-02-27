@@ -6,7 +6,7 @@
     directory="tbfac.policy:skins/tbfac" />
 
  <skin-path name="*">
-  <layer name="tbfac_policy_templates"
+  <layer name="tbfac"
     insert-after="custom" />
  </skin-path>
 
