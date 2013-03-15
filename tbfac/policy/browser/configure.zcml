@@ -63,4 +63,24 @@
       permission="zope2.View"
       />
 
+  <browser:resource
+      name="icon-author.png"
+      image="static/icon-author.png"
+      />
+
+  <browser:resource
+      name="icon-comment.png"
+      image="static/icon-comment.png"
+      />
+
+  <browser:resource
+      name="icon-comment-s.png"
+      image="static/icon-comment-s.png"
+      />
+
+  <browser:resource
+      name="disqus.css"
+      file="static/disqus.css"
+      />
+
 </configure>

@@ -1,0 +1,25 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: tbfac.policy\n"
+"POT-Creation-Date: 2013-03-15 09:11+0000\n"
+"PO-Revision-Date: 2013-03-15 17:13+0800\n"
+"Last-Translator: TsungWei Hu <marr.tw@gmail.com>\n"
+"Language-Team: Plone I18N <plone-i18n@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: zh-tw\n"
+"Language-Name: Traditional Chinese\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: tbfac.polciy\n"
+
+#: ./browser/recent-comments.pt:12
+msgid "Latest Comments"
+msgstr "最新留言"
+
+#. Default: "on"
+#: ./browser/recent-comments.pt:24
+msgid "comment_on"
+msgstr "回應："
+

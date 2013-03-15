@@ -1,0 +1,19 @@
+.comment-tile {
+  background: url("++resource++icon-author.png") no-repeat scroll 0 4px transparent;
+  border-bottom: 1px dotted #BBBBBB;
+  padding-left: 10px;
+}
+
+.comment-name {
+  padding-left: 35px;
+}
+
+.comment-body {
+  padding-left: 15px;
+}
+
+.comment-thread {
+  background: url("++resource++icon-comment-s.png") no-repeat scroll 15px 5px transparent;
+  color: #888888;
+  padding-left: 35px;
+}

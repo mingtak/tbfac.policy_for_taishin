@@ -9,16 +9,20 @@
 
 <metal:content-core fill-slot="main">
   <metal:content-core define-macro="main">
-    <h1>Latest Comments</h1>
+    <h1 i18n:translate="">Latest Comments</h1>
     <div class="latest-comments-list">
-      <dl tal:repeat="comment view/getComments">
-        <dt tal:content="comment/author">Name</dt>
-        <dd>
-          <a class="body" href="#"
+      <dl class="comment-tile"
+       tal:repeat="comment view/getComments">
+        <dt class="comment-name"
+         tal:content="comment/author">Name</dt>
+        <dd class="comment-body">
+          <a href="#"
              tal:attributes="href comment/url"
              tal:content="comment/body">Comment Body</a>
-          from:
-          <a class="comment-link"
+        </dd>
+        <dd class="comment-thread">
+          <tal:string i18n:translate="comment_on">on</tal:string>
+          <a href="#"
              tal:condition="comment/thread"
              tal:attributes="href comment/thread/url"
              tal:content="comment/thread/title">Thread Title</a>

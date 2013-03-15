@@ -16,9 +16,12 @@ class RecentCommentsView(BrowserView):
                     'title': threads[thread_id].get('title', 'No Title'),
                     'url': threads[thread_id].get('link', ''),
                 }
+            body = c.get('raw_message', '')
+            if len(body) > 30:
+                body = body[:30] + '...'
             comments.append({
                 'author': c.get('author', {}).get('name', 'Anonymous'),
-                'body': c.get('raw_message', '')[:30],
+                'body': body,
                 'thread': thread,
                 'url': '%s#comment-%s' % (thread.get('url', ''), c.get('id',
                     '')),
