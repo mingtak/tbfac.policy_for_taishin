@@ -5,54 +5,62 @@
     xmlns:i18n="http://namespaces.zope.org/i18n"
     i18n_domain="tbfac.policy">
 
-    <include package="z3c.jbot" file="meta.zcml" />
-    <browser:templateOverrides
-        directory="overrides" />
+  <include package="z3c.jbot" file="meta.zcml" />
+  <browser:templateOverrides
+      directory="overrides" />
 
-    <configure package="collective.addthis">
-    <browser:viewlet
-        name="collective.addthis"
-        for="tbfac.content.info.IInfo"
-        class="collective.addthis.addthis.AddThisViewlet"
-        manager="plone.app.layout.viewlets.interfaces.IAboveContentTitle"
-        template="addthis.pt"
-        permission="zope.Public"
-        layer="tbfac.policy.interfaces.ITBFACPolicyLayer"
-        />
-    <browser:viewlet
-        name="collective.addthis"
-        for="tbfac.content.review.IReview"
-        class="collective.addthis.addthis.AddThisViewlet"
-        manager="plone.app.layout.viewlets.interfaces.IAboveContentTitle"
-        template="addthis.pt"
-        permission="zope.Public"
-        layer="tbfac.policy.interfaces.ITBFACPolicyLayer"
-        />
-    <browser:viewlet
-        name="collective.addthis"
-        for="Products.ATContentTypes.interfaces.IATNewsItem"
-        class="collective.addthis.addthis.AddThisViewlet"
-        manager="plone.app.layout.viewlets.interfaces.IAboveContentTitle"
-        template="addthis.pt"
-        permission="zope.Public"
-        layer="tbfac.policy.interfaces.ITBFACPolicyLayer"
-        />
-    </configure>
+  <configure package="collective.addthis">
+  <browser:viewlet
+      name="collective.addthis"
+      for="tbfac.content.info.IInfo"
+      class="collective.addthis.addthis.AddThisViewlet"
+      manager="plone.app.layout.viewlets.interfaces.IAboveContentTitle"
+      template="addthis.pt"
+      permission="zope.Public"
+      layer="tbfac.policy.interfaces.ITBFACPolicyLayer"
+      />
+  <browser:viewlet
+      name="collective.addthis"
+      for="tbfac.content.review.IReview"
+      class="collective.addthis.addthis.AddThisViewlet"
+      manager="plone.app.layout.viewlets.interfaces.IAboveContentTitle"
+      template="addthis.pt"
+      permission="zope.Public"
+      layer="tbfac.policy.interfaces.ITBFACPolicyLayer"
+      />
+  <browser:viewlet
+      name="collective.addthis"
+      for="Products.ATContentTypes.interfaces.IATNewsItem"
+      class="collective.addthis.addthis.AddThisViewlet"
+      manager="plone.app.layout.viewlets.interfaces.IAboveContentTitle"
+      template="addthis.pt"
+      permission="zope.Public"
+      layer="tbfac.policy.interfaces.ITBFACPolicyLayer"
+      />
+  </configure>
 
-    <browser:page
-        name="addthis_dependencies"
-        for="*"
-        class=".addthis.AddThisDependencies"
-        permission="zope.Public"
-        layer="tbfac.policy.interfaces.ITBFACPolicyLayer"
-        />
+  <browser:page
+      name="addthis_dependencies"
+      for="*"
+      class=".addthis.AddThisDependencies"
+      permission="zope.Public"
+      layer="tbfac.policy.interfaces.ITBFACPolicyLayer"
+      />
 
-    <browser:page
-        name="addthis_listing_item_buttons"
-        for="*"
-        class=".addthis.AddThisListingItemButtons"
-        permission="zope.Public"
-        layer="tbfac.policy.interfaces.ITBFACPolicyLayer"
-        />
+  <browser:page
+      name="addthis_listing_item_buttons"
+      for="*"
+      class=".addthis.AddThisListingItemButtons"
+      permission="zope.Public"
+      layer="tbfac.policy.interfaces.ITBFACPolicyLayer"
+      />
+
+  <browser:page
+      name="recent-comments"
+      for="*"
+      class=".disqus-comments.RecentCommentsView"
+      template="recent-comments.pt"
+      permission="zope2.View"
+      />
 
 </configure>
