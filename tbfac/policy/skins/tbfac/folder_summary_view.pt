@@ -18,14 +18,6 @@
    tal:attributes="src string:${portal_url}/pic/posticon2.jpg" /></a>
 </div>
 
-<div class="publication" 
- tal:condition="python: context.getId() == 'review'">
-<a href="#"
-   tal:attributes="href string:${portal_url}/event/review">
-<img src="#"
-   tal:attributes="src string:${portal_url}/pic/publication.jpg" /></a>
-</div>
-
 <div metal:use-macro="context/kss_generic_macros/macros/generic_description_view">
 Generic KSS Description. Is rendered with class="documentDescription".
 </div>
@@ -42,12 +34,13 @@ Generic KSS Description. Is rendered with class="documentDescription".
 
                     <div tal:replace="structure item_object/@@addthis_listing_item_buttons" />
 
-                    <div id="socialtools">回應: 0 |</div>
+                    <div id="socialtools"><img src="#"
+   tal:attributes="src string:${portal_url}/pic/icon-reply.png" /> 0 |</div>
 
-                    <span style="float: left; margin: 0 1em 0.5em 0;">
+                    <span style="float: right; margin: 0 1em 0.5em 0;">
                     <a href="#"
                        tal:condition="exists:item_object/image_mini"
-                       tal:attributes="href python:test(item_type in use_view_action, item_url+'/view', item_url)">
+                       tal:attributes="href python: (item_type in use_view_action) and item_url+'/view' or item_url">
                         <img src="" alt=""
                              tal:replace="structure python: path('nocall:item_object/tag')(scale='mini', css_class='tileImage')" />
                     </a>
@@ -60,13 +53,13 @@ Generic KSS Description. Is rendered with class="documentDescription".
                              tal:replace="structure python: scale.scale('image', width=170, height=170).tag()" />
                         </span>
                     </tal:info>
-
+<span class="line-space">&nbsp;</span>
                     <h2 class="tileHeadline"
                         metal:define-macro="listitem">
 
                         <a href="#"
                            class="summary url"
-                           tal:attributes="href python:test(item_type in use_view_action, item_url+'/view', item_url);"
+                           tal:attributes="href python: (item_type in use_view_action) and item_url+'/view' or item_url;"
                            tal:content="item_title_or_id">
                             Item Title
                         </a>
@@ -74,10 +67,12 @@ Generic KSS Description. Is rendered with class="documentDescription".
                     </h2>
 
                     <tal:info condition="python: item_type == 'tbfac.Info'">
-                        <span tal:content="item_object/startDate">Start Date</span>
-                        <span tal:condition="item_object/endDate"> -
-                        <span tal:replace="item_object/endDate" />
+					    <div class="exhib-date">
+                        <span  tal:content="item_object/startDate">Start Date</span>
+                        <span  tal:condition="item_object/endDate"> -
+                        <span  tal:replace="item_object/endDate" />
                         </span>
+						</div>
                     </tal:info>
 
                     <div class="documentByLine" tal:condition="python: site_properties.allowAnonymousViewAbout or not isAnon">
@@ -134,9 +129,12 @@ Generic KSS Description. Is rendered with class="documentDescription".
                               </span>
                         </span>
                     </tal:newsitem>
+                    <tal:image condition="python: item_type == 'Image'">
+                    marr
+                    </tal:image>
                     </div>
 
-                    <p class="tileBody" tal:condition="item_description">
+                    <p class="tileBody" tal:condition="python: item_description and item_type != 'Image'">
                         <span class="description" tal:content="item_description">
                             description
                         </span>
@@ -144,7 +142,7 @@ Generic KSS Description. Is rendered with class="documentDescription".
 
                     <p class="tileFooter">
                         <a href=""
-                           tal:attributes="href python:test(item_type in use_view_action, item_url+'/view', item_url);"> 
+                           tal:attributes="href python: (item_type in use_view_action) and item_url+'/view' or item_url;"> 
                            <span class="hiddenStructure"><span tal:replace="item_title_or_id" /> - </span> 
                            <span i18n:translate="read_more">Read More&hellip;</span> 
                         </a>
