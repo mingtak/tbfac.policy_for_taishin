@@ -21,6 +21,15 @@
         />
     <browser:viewlet
         name="collective.addthis"
+        for="tbfac.content.review.IReview"
+        class="collective.addthis.addthis.AddThisViewlet"
+        manager="plone.app.layout.viewlets.interfaces.IAboveContentTitle"
+        template="addthis.pt"
+        permission="zope.Public"
+        layer="tbfac.policy.interfaces.ITBFACPolicyLayer"
+        />
+    <browser:viewlet
+        name="collective.addthis"
         for="Products.ATContentTypes.interfaces.IATNewsItem"
         class="collective.addthis.addthis.AddThisViewlet"
         manager="plone.app.layout.viewlets.interfaces.IAboveContentTitle"
