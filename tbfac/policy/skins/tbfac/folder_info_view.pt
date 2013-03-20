@@ -1,0 +1,111 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="tbfac.policy">
+
+<body>
+
+<metal:description fill-slot="content-description">
+
+<div class="posticon">
+<a href="#"
+   tal:attributes="href string:${portal_url}/post">
+<img src="#"
+   tal:attributes="src string:${portal_url}/++resource++add-info.jpg" /></a>
+</div>
+
+<div metal:use-macro="context/kss_generic_macros/macros/generic_description_view">
+Generic KSS Description. Is rendered with class="documentDescription".
+</div>
+</metal:description>
+<div class="visualClear"><!-- --></div>
+    <metal:content-core fill-slot="content-core">
+        <metal:block define-macro="listing" extend-macro="context/folder_listing/macros/content-core">
+            <!-- we don't want the dl -->
+            <metal:entries fill-slot="entries">
+                <metal:block use-macro="context/folder_listing/macros/entries">
+                    <metal:entry fill-slot="entry">
+                <div class="tileItem visualIEFloatFix"
+                     tal:define="item_object item/getObject;">
+
+                    <div tal:replace="structure item_object/@@addthis_listing_item_buttons" />
+
+                    <div id="socialtools"><img src="#"
+   tal:attributes="src string:${portal_url}/pic/icon-reply.png" /> 0 |</div>
+
+                    <span style="float: right; margin: 0 1em 0.5em 0;">
+                    <a href="#"
+                       tal:condition="exists:item_object/image_mini"
+                       tal:attributes="href python: (item_type in use_view_action) and item_url+'/view' or item_url">
+                        <img src="" alt=""
+                             tal:replace="structure python: path('nocall:item_object/tag')(scale='mini', css_class='tileImage')" />
+                    </a>
+                    </span>
+
+                    <tal:info condition="python: item_type == 'tbfac.Info'">
+                        <span style="float: left; margin: 0 1em 0.5em 0;"
+                         tal:condition="item_object/image">
+                        <img tal:define="scale item_object/@@images"
+                             tal:replace="structure python: scale.scale('image', width=170, height=170).tag()" />
+                        </span>
+                    </tal:info>
+<span class="line-space">&nbsp;</span>
+                    <h2 class="tileHeadline"
+                        metal:define-macro="listitem">
+
+                        <a href="#"
+                           class="summary url"
+                           tal:attributes="href python: (item_type in use_view_action) and item_url+'/view' or item_url;"
+                           tal:content="item_title_or_id">
+                            Item Title
+                        </a>
+
+                    </h2>
+
+                    <tal:info condition="python: item_type == 'tbfac.Info'">
+					    <div class="exhib-date">
+                        <span  tal:content="item_object/startDate">Start Date</span>
+                        <span  tal:condition="item_object/endDate"> -
+                        <span  tal:replace="item_object/endDate" />
+                        </span>
+						</div>
+                    </tal:info>
+
+                    <div class="documentByLine" tal:condition="python: site_properties.allowAnonymousViewAbout or not isAnon">
+
+                    <tal:image condition="python: item_type == 'Image'">
+                    marr
+                    </tal:image>
+                    </div>
+
+                    <p class="tileBody" tal:condition="python: item_description and item_type != 'Image'">
+                        <span class="description" tal:content="item_description">
+                            description
+                        </span>
+                    </p>
+
+                    <p class="tileFooter">
+                        <a href=""
+                           tal:attributes="href python: (item_type in use_view_action) and item_url+'/view' or item_url;"> 
+                           <span class="hiddenStructure"><span tal:replace="item_title_or_id" /> - </span> 
+                           <span i18n:translate="read_more_info">Read More&hellip;</span> 
+                        </a>
+                    </p>
+
+                    <div class="visualClear"><!-- --></div>
+
+                </div>
+                    </metal:entry>
+                </metal:block>
+            </metal:entries>
+        </metal:block>
+
+        <div tal:replace="structure context/@@addthis_dependencies" />
+
+    </metal:content-core>
+
+</body>
+</html>

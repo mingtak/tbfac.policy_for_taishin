@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: tbfac.policy\n"
-"POT-Creation-Date: 2013-03-15 09:11+0000\n"
-"PO-Revision-Date: 2013-03-15 17:13+0800\n"
+"POT-Creation-Date: 2013-03-20 09:25+0000\n"
+"PO-Revision-Date: 2013-03-20 17:26+0800\n"
 "Last-Translator: TsungWei Hu <marr.tw@gmail.com>\n"
 "Language-Team: Plone I18N <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -22,4 +22,9 @@ msgstr "最新留言"
 #: ./browser/recent-comments.pt:24
 msgid "comment_on"
 msgstr "回應："
+
+#. Default: "Read More…"
+#: ./skins/tbfac/folder_info_view.pt:94
+msgid "read_more_info"
+msgstr "閱讀全文…"
 

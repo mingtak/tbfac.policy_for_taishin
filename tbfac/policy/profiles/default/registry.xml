@@ -1,8 +1,6 @@
 <registry>
   <record name="collective.addthis.interfaces.IAddThisSettings.addthis_chicklets">
     <value>
-      <element>google_plusone</element>
-      <element>twitter</element>
       <element>facebook_like</element>
     </value>
   </record>

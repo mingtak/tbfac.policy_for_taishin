@@ -26,8 +26,6 @@
 
         <div class="thread-comments" style="margin: 10px">
           <span class="comment-text" style="margin-right: 20px">
-          <img src="" alt=""
-           tal:attributes="src string:${portal_url}/++resource++tbfac.policy/icon-reply-small.png" />
             <tal:marr i18n:translate=""
                   i18n:domain="collective.disqus">
 
