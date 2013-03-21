@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2013-03-20 09:25+0000\n"
+"POT-Creation-Date: 2013-03-20 15:01+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,8 +17,16 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: tbfac.policy\n"
 
+#: ./skins/tbfac/folder_talk_view.pt:54
+msgid "Author:"
+msgstr ""
+
 #: ./browser/recent-comments.pt:12
 msgid "Latest Comments"
+msgstr ""
+
+#: ./skins/tbfac/folder_talk_view.pt:59
+msgid "at"
 msgstr ""
 
 #. Default: "on"
@@ -27,7 +35,12 @@ msgid "comment_on"
 msgstr ""
 
 #. Default: "Read More…"
-#: ./skins/tbfac/folder_info_view.pt:94
+#: ./skins/tbfac/folder_info_view.pt:87
 msgid "read_more_info"
+msgstr ""
+
+#. Default: "Read More…"
+#: ./skins/tbfac/folder_talk_view.pt:75
+msgid "read_more_talk"
 msgstr ""
 

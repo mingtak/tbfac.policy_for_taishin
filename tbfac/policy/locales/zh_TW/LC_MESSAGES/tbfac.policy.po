@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: tbfac.policy\n"
-"POT-Creation-Date: 2013-03-20 09:25+0000\n"
-"PO-Revision-Date: 2013-03-20 17:26+0800\n"
+"POT-Creation-Date: 2013-03-20 15:01+0000\n"
+"PO-Revision-Date: 2013-03-20 23:02+0800\n"
 "Last-Translator: TsungWei Hu <marr.tw@gmail.com>\n"
 "Language-Team: Plone I18N <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -14,9 +14,17 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: tbfac.polciy\n"
 
+#: ./skins/tbfac/folder_talk_view.pt:54
+msgid "Author:"
+msgstr "張貼者："
+
 #: ./browser/recent-comments.pt:12
 msgid "Latest Comments"
 msgstr "最新留言"
+
+#: ./skins/tbfac/folder_talk_view.pt:59
+msgid "at"
+msgstr " "
 
 #. Default: "on"
 #: ./browser/recent-comments.pt:24
@@ -24,7 +32,12 @@ msgid "comment_on"
 msgstr "回應："
 
 #. Default: "Read More…"
-#: ./skins/tbfac/folder_info_view.pt:94
+#: ./skins/tbfac/folder_info_view.pt:87
 msgid "read_more_info"
 msgstr "閱讀全文…"
+
+#. Default: "Read More…"
+#: ./skins/tbfac/folder_talk_view.pt:75
+msgid "read_more_talk"
+msgstr "更多討論…"
 

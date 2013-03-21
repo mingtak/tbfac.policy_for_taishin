@@ -12,9 +12,9 @@
 
 <div class="posticon">
 <a href="#"
-   tal:attributes="href string:${portal_url}/post">
+   tal:attributes="href string:${portal_url}/event/talks/++add++tbfac.Article">
 <img src="#"
-   tal:attributes="src string:${portal_url}/++resource++add-info.jpg" /></a>
+   tal:attributes="src string:${portal_url}/++resource++add-talk.jpg" /></a>
 </div>
 
 <div metal:use-macro="context/kss_generic_macros/macros/generic_description_view">
@@ -23,7 +23,7 @@ Generic KSS Description. Is rendered with class="documentDescription".
 </metal:description>
 <div class="visualClear"><!-- --></div>
 <metal:content-core fill-slot="content-core"
- tal:define="contentFilter python:{'portal_type': ('tbfac.Info',)}">
+ tal:define="contentFilter python:{'portal_type': ('tbfac.Article',)}">
   <metal:block define-macro="listing" extend-macro="context/folder_listing/macros/content-core">
   <!-- we don't want the dl -->
     <metal:entries fill-slot="entries">
@@ -38,23 +38,6 @@ Generic KSS Description. Is rendered with class="documentDescription".
         <div id="socialtools"><img src="#"
    tal:attributes="src string:${portal_url}/pic/icon-reply.png" /> 0 |</div>
 
-        <span style="float: right; margin: 0 1em 0.5em 0;">
-        <a href="#"
-         tal:condition="exists:item_obj/image_mini"
-         tal:attributes="href python: (item_type in use_view_action) and item_url+'/view' or item_url">
-          <img src="" alt=""
-           tal:replace="structure python: path('nocall:item_obj/tag')(scale='mini', css_class='tileImage')" />
-        </a>
-        </span>
-
-        <tal:info condition="python: item_type == 'tbfac.Info'">
-          <span style="float: left; margin: 0 1em 0.5em 0;"
-           tal:condition="item_obj/image">
-            <img tal:define="scale item_obj/@@images"
-                 tal:replace="structure python: scale.scale('image', width=170, height=170).tag()" />
-          </span>
-        </tal:info>
-<span class="line-space">&nbsp;</span>
         <h2 class="tileHeadline"
          metal:define-macro="listitem">
 
@@ -66,16 +49,20 @@ Generic KSS Description. Is rendered with class="documentDescription".
 
         </h2>
 
-        <tal:info condition="python: item_type == 'tbfac.Info'">
-          <div class="exhib-date">
-          <span  tal:content="item_obj/startDate">Start Date</span>
-          <span  tal:condition="item_obj/endDate"> -
-          <span  tal:replace="item_obj/endDate" />
+        <div class="documentByLine">
+          <span class="documentAuthor">
+          <tal:field i18n:translate="">Author:</tal:field>
+          <span tal:replace="item_obj/author">Name</span>
           </span>
-          </div>
-        </tal:info>
+          &mdash;
+          <span class="documentModified">
+          <tal:date i18n:translate="">at</tal:date>
+          <span tal:replace="python:toLocalizedTime(item_created,long_format=1)">Auguest 16, 2001 at 23:35:59</span>
+          </span>
 
-        <p class="tileBody" tal:condition="python: item_description and item_type != 'Image'">
+        </div>
+
+        <p class="tileBody" tal:condition="python: item_description">
           <span class="description" tal:content="item_description">
           description
           </span>
@@ -85,7 +72,7 @@ Generic KSS Description. Is rendered with class="documentDescription".
           <a href=""
            tal:attributes="href python: (item_type in use_view_action) and item_url+'/view' or item_url;"> 
           <span class="hiddenStructure"><span tal:replace="item_title_or_id" /> - </span> 
-          <span i18n:translate="read_more_info">Read More&hellip;</span> 
+          <span i18n:translate="read_more_talk">Read More&hellip;</span> 
           </a>
         </p>
 

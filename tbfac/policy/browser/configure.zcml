@@ -93,6 +93,11 @@
       />
 
   <browser:resource
+      name="add-talk.jpg"
+      image="static/add-talk.jpg"
+      />
+
+  <browser:resource
       name="disqus.css"
       file="static/disqus.css"
       />
