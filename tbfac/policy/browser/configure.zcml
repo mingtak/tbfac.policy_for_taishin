@@ -30,7 +30,7 @@
       />
   <browser:viewlet
       name="collective.addthis"
-      for="tbfac.content.folder.IFolder"
+      for="tbfac.content.folder.IArticle"
       class="collective.addthis.addthis.AddThisViewlet"
       manager="plone.app.layout.viewlets.interfaces.IAboveContentTitle"
       template="addthis.pt"
