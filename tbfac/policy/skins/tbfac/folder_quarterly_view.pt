@@ -1,0 +1,73 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="tbfac.policy">
+
+<body>
+
+<metal:content-core fill-slot="content-core"
+ tal:define="contentFilter python:{'portal_type': ('tbfac.Quarterly')}">
+  <metal:block define-macro="listing" extend-macro="context/folder_listing/macros/content-core">
+  <!-- we don't want the dl -->
+    <metal:entries fill-slot="entries">
+
+      <metal:block use-macro="context/folder_listing/macros/entries">
+        <metal:entry fill-slot="entry">
+        <div class="tileItem visualIEFloatFix"
+         tal:define="item_obj item/getObject;">
+
+        <div tal:replace="structure item_obj/@@addthis_listing_item_buttons" />
+
+        <div id="socialtools"><img src="#"
+   tal:attributes="src string:${portal_url}/pic/icon-reply.png" /> 0 |</div>
+
+        <h2 class="tileHeadline"
+         metal:define-macro="listitem">
+
+          <a href="#" class="summary url"
+           tal:attributes="href python: (item_type in use_view_action) and item_url+'/view' or item_url;"
+           tal:content="item_title_or_id">
+           Item Title
+          </a>
+
+        </h2>
+
+        <div class="documentByLine">
+          <span class="documentModified">
+          <tal:date i18n:translate="">at</tal:date>
+          <span tal:replace="python:toLocalizedTime(item_created,long_format=1)">Auguest 16, 2001 at 23:35:59</span>
+          </span>
+
+        </div>
+
+        <p class="tileBody" tal:condition="python: item_description">
+          <span class="description" tal:content="item_description">
+          description
+          </span>
+        </p>
+
+        <p class="tileFooter">
+          <a href=""
+           tal:attributes="href python: (item_type in use_view_action) and item_url+'/view' or item_url;"> 
+          <span class="hiddenStructure"><span tal:replace="item_title_or_id" /> - </span> 
+          <span i18n:translate="read_more_talk">Read More&hellip;</span> 
+          </a>
+        </p>
+
+        <div class="visualClear"><!-- --></div>
+
+        </div>
+        </metal:entry>
+      </metal:block>
+    </metal:entries>
+  </metal:block>
+
+  <div tal:replace="structure context/@@addthis_dependencies" />
+
+</metal:content-core>
+
+</body>
+</html>
