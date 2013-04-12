@@ -9,7 +9,7 @@
 <body>
 
 <metal:content-core fill-slot="content-core"
- tal:define="contentFilter python:{'portal_type': ('tbfac.Review',)}">
+ tal:define="contentFilter python:{'portal_type': ('tbfac.Review',), 'sort_on': 'created', 'sort_order': 'descending'}">
   <metal:block define-macro="listing" extend-macro="context/folder_listing/macros/content-core">
   <!-- we don't want the dl -->
     <metal:entries fill-slot="entries">

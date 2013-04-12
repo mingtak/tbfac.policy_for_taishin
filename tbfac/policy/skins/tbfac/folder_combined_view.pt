@@ -8,8 +8,19 @@
 
 <body>
 
+<metal:header fill-slot="header">
+<div class="nomi-year-info">
+第 12 屆提名觀察人
+</div>
+<div class="leadImageContainer"
+ tal:define="jury python: context.absolute_url()[-3:]">
+<img tal:attributes="src string:${portal_url}/juries/2013/${jury}/@@download/photo/${jury}.jpg;
+                     alt string:${jury}" />
+</div>
+</metal:header>
+
 <metal:content-core fill-slot="content-core"
- tal:define="contentFilter python:{'portal_type': ('tbfac.Review','tbfac.Quarterly')}">
+ tal:define="contentFilter python:{'portal_type': ('tbfac.Review','tbfac.Quarterly'), 'sort_on': 'created', 'sort_order': 'descending'}">
   <metal:block define-macro="listing" extend-macro="context/folder_listing/macros/content-core">
   <!-- we don't want the dl -->
     <metal:entries fill-slot="entries">
