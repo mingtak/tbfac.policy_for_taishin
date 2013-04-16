@@ -1,0 +1,92 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="plone">
+
+<body>
+
+<metal:content-core fill-slot="content-core">
+<metal:block use-macro="context/standard_view/macros/content-core">
+
+    <metal:entries fill-slot="entries">
+    <metal:block use-macro="context/standard_view/macros/entries">
+    <metal:entry fill-slot="entry">
+
+        <div class="tileItem visualIEFloatFix"
+             tal:define="obj item/getObject">
+          <div tal:replace="structure obj/@@addthis_listing_item_buttons" />
+          <div id="socialtools">
+            <img src="#"
+             tal:attributes="src string:${portal_url}/pic/icon-reply.png" />0 |</div>
+            <a href="#"
+                  tal:condition="obj/image|nothing"
+                  tal:attributes="href item/getURL">
+                      <img src="" alt=""
+                           tal:define="scales obj/@@images;
+                                       scale python:scales.scale('image', 'mini')"
+                           tal:replace="structure python:scale and scale.tag(css_class='tileImage') or None" />
+            </a>
+
+            <h2 class="tileHeadline" metal:define-macro="listitem">
+                <a href="#"
+                   class="summary url"
+                   tal:attributes="href python:item_type in use_view_action and item_url+'/view' or item_url;"
+                   tal:content="item/Title">
+                    Item Title
+                </a>
+            </h2>
+
+            <div class="documentByLine">
+            <tal:info condition="python: obj.portal_type == 'tbfac.Info'">
+            <div class="exhib-date">
+              <span tal:content="obj/startDate">Start Date</span>
+              <span tal:condition="obj/endDate"> -
+              <span tal:replace="obj/endDate" />
+              </span>
+            </div>
+            </tal:info>
+
+            <tal:review condition="python: obj.portal_type == 'tbfac.Review'"
+                        define="author python:pas_member.info(item_creator);
+                                creator_short_form author/username;
+                                creator_long_form string:?author=${author/username};">
+            <span tal:replace="author/name_or_id" tal:omit-tag="not:author">Bob Dobalina</span>
+            <span tal:replace="python:toLocalizedTime(item_created,long_format=1)">Auguest 16, 2001 at 23:35:59</span>
+            </tal:review>
+
+            <tal:news condition="python: obj.portal_type == 'News Item'">
+            <span tal:replace="python:toLocalizedTime(item_created,long_format=1)">Auguest 16, 2001 at 23:35:59</span>
+            </tal:news>
+            </div>
+
+            <!-- div metal:use-macro="context/standard_view/macros/document_byline" --><!-- /div -->
+
+            <p class="tileBody" tal:condition="item_description">
+                <span class="description" tal:content="item_description">
+                    description
+                </span>
+            </p>
+
+            <p class="tileFooter">
+                <a href=""
+                   tal:attributes="href python:item_type in use_view_action and item_url+'/view' or item_url;">
+                    <span class="hiddenStructure"><span tal:replace="item/Title" /> - </span>
+                    <span i18n:translate="read_more">Read More&hellip;</span>
+                </a>
+            </p>
+
+            <div class="visualClear"><!-- --></div>
+        </div>
+
+    </metal:entry>
+    </metal:block>
+    </metal:entries>
+
+</metal:block>
+</metal:content-core>
+
+</body>
+</html>
