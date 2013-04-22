@@ -86,6 +86,7 @@
     </metal:entries>
 
 </metal:block>
+<div tal:replace="structure context/@@addthis_dependencies" />
 </metal:content-core>
 
 </body>
