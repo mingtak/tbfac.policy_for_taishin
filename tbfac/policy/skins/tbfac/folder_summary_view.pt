@@ -34,9 +34,6 @@ Generic KSS Description. Is rendered with class="documentDescription".
 
                     <div tal:replace="structure item_object/@@addthis_listing_item_buttons" />
 
-                    <div id="socialtools"><img src="#"
-   tal:attributes="src string:${portal_url}/pic/icon-reply.png" /> 0 |</div>
-
                     <span style="float: right; margin: 0 1em 0.5em 0;">
                     <a href="#"
                        tal:condition="exists:item_object/image_mini"
