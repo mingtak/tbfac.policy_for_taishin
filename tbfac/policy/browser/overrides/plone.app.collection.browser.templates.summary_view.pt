@@ -18,9 +18,6 @@
         <div class="tileItem visualIEFloatFix"
              tal:define="obj item/getObject">
           <div tal:replace="structure obj/@@addthis_listing_item_buttons" />
-          <div id="socialtools">
-            <img src="#"
-             tal:attributes="src string:${portal_url}/pic/icon-reply.png" />0 |</div>
             <a href="#"
                   tal:condition="obj/image|nothing"
                   tal:attributes="href item/getURL">
@@ -87,6 +84,8 @@
 
 </metal:block>
 <div tal:replace="structure context/@@addthis_dependencies" />
+<script tal:replace="structure context/@@get_disqus_counter_js|nothing" />
+
 </metal:content-core>
 
 </body>

@@ -9,6 +9,15 @@
   <browser:templateOverrides
       directory="overrides" />
 
+  <browser:page
+      name="get_disqus_counter_js"
+      for="*"
+      class=".disqus_util.DisqusUtilsView"
+      attribute="get_counter_js"
+      permission="zope2.View"
+      layer="tbfac.policy.interfaces.ITBFACPolicyLayer"
+      />
+
   <configure package="collective.addthis">
   <browser:viewlet
       name="collective.addthis"
