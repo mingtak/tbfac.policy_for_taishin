@@ -10,6 +10,15 @@
       directory="overrides" />
 
   <browser:page
+      name="get_disqus_identifier"
+      for="*"
+      class=".disqus_util.DisqusUtilsView"
+      attribute="get_disqus_identifier"
+      permission="zope2.View"
+      layer="tbfac.policy.interfaces.ITBFACPolicyLayer"
+      />
+
+  <browser:page
       name="get_disqus_counter_js"
       for="*"
       class=".disqus_util.DisqusUtilsView"

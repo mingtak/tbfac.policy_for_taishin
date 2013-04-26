@@ -1,18 +1,7 @@
-<span class="disqus-comments-counter">
-  <img src="icon-reply.png"
-       tal:attributes="src string:${context/portal_url}/${attrs/src}" />
-  <a href="#disqus_thread"
-     tal:attributes="href string:${context/absolute_url}${attrs/href};
-                     data-disqus-identifier context/UID|string:"
-     i18n:translate="">
-    <span class="hiddenStructure">Comments</span>
-  </a>
-</span>
 <tal:block tal:condition="view/available"
            i18n:domain="collective.addthis"
            tal:define="chicklets view/chicklets">
   <tal:addthis-button tal:condition="view/addthis_button_visible">
-    <span class="addthis_separator">|</span>
     <a href="#" class="addthis_button_compact"
        tal:attributes="href view/getAddThisURL" i18n:translate="">Share</a>
     <span class="addthis_separator">|</span>
@@ -23,5 +12,16 @@
       illegitimate chicklets randomly show up on the page.
     </tal:comment>
     <a tal:condition="chicklet" tal:attributes="class python:'addthis_button_%s' % chicklet.value"></a>
+    <span class="addthis_separator">|</span>
   </tal:chicklet-block>
 </tal:block>
+<span class="disqus-comments-counter">
+  <img src="icon-reply.png"
+       tal:attributes="src string:${context/portal_url}/pic/${attrs/src}" />
+  <a href="#disqus_thread"
+     tal:attributes="href string:${context/absolute_url}${attrs/href};
+                     data-disqus-identifier context/@@get_disqus_identifier"
+     i18n:translate="">
+    <span class="hiddenStructure">Comments</span>
+  </a>
+</span>

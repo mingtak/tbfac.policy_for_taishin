@@ -1,16 +1,22 @@
-
 from zope.component import getUtility
 
 from plone.registry.interfaces import IRegistry
+from plone.uuid.interfaces import IUUID
 
 from Products.CMFPlone.PloneBatch import Batch
-
 from Products.Five.browser import BrowserView
 
 from collective.disqus.interfaces import IDisqusSettings
 
 
 class DisqusUtilsView(BrowserView):
+
+    def get_disqus_identifier(self):
+        """Returns object UID"""
+        uid = IUUID(self.context, None)
+        if not uid:
+            uid = self.context.UID()
+        return uid
 
     def get_counter_js(self):
         """ Get the js mentioned in
