@@ -155,6 +155,7 @@ Generic KSS Description. Is rendered with class="documentDescription".
 
         <div tal:replace="structure context/@@addthis_dependencies" />
         <script tal:replace="structure context/@@get_disqus_counter_js" />
+
     </metal:content-core>
 
 </body>

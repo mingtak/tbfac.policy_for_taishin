@@ -35,9 +35,6 @@ Generic KSS Description. Is rendered with class="documentDescription".
 
         <div tal:replace="structure item_obj/@@addthis_listing_item_buttons" />
 
-        <div id="socialtools"><img src="#"
-   tal:attributes="src string:${portal_url}/pic/icon-reply.png" /> 0 |</div>
-
         <h2 class="tileHeadline"
          metal:define-macro="listitem">
 
@@ -85,6 +82,7 @@ Generic KSS Description. Is rendered with class="documentDescription".
   </metal:block>
 
   <div tal:replace="structure context/@@addthis_dependencies" />
+  <script tal:replace="structure context/@@get_disqus_counter_js" />
 
 </metal:content-core>
 

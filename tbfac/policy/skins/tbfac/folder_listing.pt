@@ -8,6 +8,14 @@
 
 <body>
 
+<metal:header fill-slot="header">
+<div style="float: right"
+ tal:define="url context/absolute_url"
+     condition="python:url.endswith('/venue')">
+  <a href="/venues">地圖顯示</a>
+</div>
+</metal:header>
+
 <metal:content-core fill-slot="content-core">
 <metal:block define-macro="content-core"
                     tal:define="kssClassesView context/@@kss_field_decorator_view;
