@@ -51,9 +51,9 @@
 
         </div>
 
-        <p class="tileBody" tal:condition="python: item_description">
-          <span class="description" tal:content="item_description">
-          description
+        <p class="tileBody" tal:condition="repeat/item/start">
+          <span class="description" tal:content="structure item_obj/text/output">
+          First Review Content.
           </span>
         </p>
 
