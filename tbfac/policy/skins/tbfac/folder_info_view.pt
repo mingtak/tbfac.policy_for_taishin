@@ -69,6 +69,11 @@ Generic KSS Description. Is rendered with class="documentDescription".
           <span  tal:condition="item_obj/endDate"> -
           <span  tal:replace="item_obj/endDate" />
           </span>
+          <tal:region condition="item_obj/region"
+           tal:repeat="r item_obj/region">
+            <span i18n:translate="" tal:replace="r">Value</span>
+            <span class="separator" tal:condition="not:repeat/r/end">,</span>
+          </tal:region>
           </div>
         </tal:info>
 
