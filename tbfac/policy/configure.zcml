@@ -19,6 +19,6 @@
       />
   <!-- -*- extra stuff goes here -*- -->
 
-  <cmf:registerDirectory name="skins" directory="skins" recursive="True" />
+  <cmf:registerDirectory name="tbfac_policy" />
 
 </configure>

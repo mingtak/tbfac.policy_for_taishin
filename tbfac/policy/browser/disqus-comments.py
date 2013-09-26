@@ -21,6 +21,7 @@ class RecentCommentsView(BrowserView):
                 body = body[:30] + '...'
             comments.append({
                 'author': c.get('author', {}).get('name', 'Anonymous'),
+                'date': c.get('createdAt', ''),
                 'body': body,
                 'thread': thread,
                 'url': '%s#comment-%s' % (thread.get('url', ''), c.get('id',

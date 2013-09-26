@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <object name="portal_skins">
   
- <object name="tbfac"
+ <object name="tbfac_policy"
     meta_type="Filesystem Directory View"
-    directory="tbfac.policy:skins/tbfac" />
+    directory="tbfac.policy:skins/tbfac_policy" />
 
  <skin-path name="*">
-  <layer name="tbfac"
+  <layer name="tbfac_policy"
     insert-after="custom" />
  </skin-path>
 

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<object name="portal_actions"
+   xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+
+ <object name="document_actions">
+  <object name="kml_download">
+   <property name="visible">False</property>
+  </object>
+ </object>
+</object>

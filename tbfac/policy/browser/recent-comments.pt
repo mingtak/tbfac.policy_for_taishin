@@ -15,6 +15,9 @@
        tal:repeat="comment view/getComments">
         <dt class="comment-name"
          tal:content="comment/author">Name</dt>
+        <dd style="margin-left: 40px"
+         tal:content="python: comment['date'][:10]">Date
+        </dd>
         <dd class="comment-body">
           <a href="#"
              tal:attributes="href comment/url"
