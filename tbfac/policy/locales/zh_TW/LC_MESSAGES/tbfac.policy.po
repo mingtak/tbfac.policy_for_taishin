@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: tbfac.policy\n"
-"POT-Creation-Date: 2013-06-07 12:14+0000\n"
-"PO-Revision-Date: 2013-03-20 23:02+0800\n"
+"POT-Creation-Date: 2014-01-03 13:56+0000\n"
+"PO-Revision-Date: 2014-01-03 22:12+0800\n"
 "Last-Translator: TsungWei Hu <marr.tw@gmail.com>\n"
 "Language-Team: Plone I18N <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -14,100 +14,40 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: tbfac.polciy\n"
 
-#: ./skins/tbfac/folder_talk_view.pt:51
-msgid "Author:"
-msgstr "張貼者："
-
-msgid "ChanghuaCounty"
-msgstr "彰化縣"
-
-msgid "ChiayiCity"
-msgstr "嘉義市"
-
-msgid "ChiayiCounty"
-msgstr "嘉義縣"
-
-msgid "HsinchuCity"
-msgstr "新竹市"
-
-msgid "HsinchuCounty"
-msgstr "新竹縣"
-
-msgid "HualienCounty"
-msgstr "花蓮縣"
-
-msgid "KaohsiungCity"
-msgstr "高雄市"
-
-msgid "KeelungCity"
-msgstr "基隆市"
-
-msgid "KinmenCounty"
-msgstr "金門縣"
-
 #: ./browser/recent-comments.pt:12
 msgid "Latest Comments"
 msgstr "最新留言"
 
-msgid "LenchiangCounty"
-msgstr "連江縣"
-
-msgid "MiaoliCounty"
-msgstr "苗栗縣"
-
-msgid "NantouCounty"
-msgstr "南投縣"
-
-msgid "NewTaipeiCity"
-msgstr "新北市"
-
-msgid "PenghuCounty"
-msgstr "澎湖縣"
-
-msgid "PingtungCounty"
-msgstr "屏東縣"
-
-msgid "TaichungCity"
-msgstr "台中市"
-
-msgid "TainanCity"
-msgstr "台南市"
-
-msgid "TaipeiCity"
-msgstr "台北市"
-
-msgid "TaitungCounty"
-msgstr "台東縣"
-
-msgid "TaoyuanCounty"
-msgstr "桃園縣"
-
-msgid "YilanCounty"
-msgstr "宜蘭縣"
-
-msgid "YunlinCounty"
-msgstr "雲林縣"
-
-#: ./skins/tbfac/folder_combined_view.pt:48
-#: ./skins/tbfac/folder_quarterly_view.pt:37
-#: ./skins/tbfac/folder_review_view.pt:37
+#: ./skins/tbfac_policy/folder_combined_view.pt:51
+#: ./skins/tbfac_policy/folder_quarterly_view.pt:37
+#: ./skins/tbfac_policy/folder_review_view.pt:37
 msgid "at"
 msgstr " "
 
+#. Default: "Author:"
+#: ./skins/tbfac_policy/folder_talk_view.pt:53
+msgid "author_forum"
+msgstr "作者："
+
+#. Default: "Author:"
+#: ./skins/tbfac_policy/folder_talk_view.pt:52
+msgid "author_talk"
+msgstr "張貼者："
+
 #. Default: "on"
-#: ./browser/recent-comments.pt:24
+#: ./browser/recent-comments.pt:27
 msgid "comment_on"
 msgstr "回應："
 
 #. Default: "Read More…"
-#: ./skins/tbfac/folder_info_view.pt:90
+#: ./skins/tbfac_policy/folder_info_view.pt:90
 msgid "read_more_info"
 msgstr "閱讀全文…"
 
 #. Default: "Read More…"
-#: ./skins/tbfac/folder_combined_view.pt:64
-#: ./skins/tbfac/folder_quarterly_view.pt:53
-#: ./skins/tbfac/folder_review_view.pt:53
+#: ./skins/tbfac_policy/folder_combined_view.pt:67
+#: ./skins/tbfac_policy/folder_quarterly_view.pt:53
+#: ./skins/tbfac_policy/folder_review_view.pt:53
 msgid "read_more_talk"
 msgstr "更多討論…"
 

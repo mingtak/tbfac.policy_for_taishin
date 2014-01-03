@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2013-06-07 12:14+0000\n"
+"POT-Creation-Date: 2014-01-03 13:56+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,100 +17,40 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: tbfac.policy\n"
 
-#: ./skins/tbfac/folder_talk_view.pt:51
-msgid "Author:"
-msgstr ""
-
 #: ./browser/recent-comments.pt:12
 msgid "Latest Comments"
 msgstr ""
 
-#: ./skins/tbfac/folder_combined_view.pt:48
-#: ./skins/tbfac/folder_quarterly_view.pt:37
-#: ./skins/tbfac/folder_review_view.pt:37
+#: ./skins/tbfac_policy/folder_combined_view.pt:51
+#: ./skins/tbfac_policy/folder_quarterly_view.pt:37
+#: ./skins/tbfac_policy/folder_review_view.pt:37
 msgid "at"
 msgstr ""
 
+#. Default: "Author:"
+#: ./skins/tbfac_policy/folder_talk_view.pt:53
+msgid "author_forum"
+msgstr ""
+
+#. Default: "Author:"
+#: ./skins/tbfac_policy/folder_talk_view.pt:52
+msgid "author_talk"
+msgstr ""
+
 #. Default: "on"
-#: ./browser/recent-comments.pt:24
+#: ./browser/recent-comments.pt:27
 msgid "comment_on"
 msgstr ""
 
 #. Default: "Read More…"
-#: ./skins/tbfac/folder_info_view.pt:90
+#: ./skins/tbfac_policy/folder_info_view.pt:90
 msgid "read_more_info"
 msgstr ""
 
 #. Default: "Read More…"
-#: ./skins/tbfac/folder_combined_view.pt:64
-#: ./skins/tbfac/folder_quarterly_view.pt:53
-#: ./skins/tbfac/folder_review_view.pt:53
+#: ./skins/tbfac_policy/folder_combined_view.pt:67
+#: ./skins/tbfac_policy/folder_quarterly_view.pt:53
+#: ./skins/tbfac_policy/folder_review_view.pt:53
 msgid "read_more_talk"
-msgstr ""
-
-msgid "KeelungCity"
-msgstr ""
-
-msgid "TaipeiCity"
-msgstr ""
-
-msgid "NewTaipeiCity"
-msgstr ""
-
-msgid "TaoyuanCounty"
-msgstr ""
-
-msgid "HsinchuCity"
-msgstr ""
-
-msgid "HsinchuCounty"
-msgstr ""
-
-msgid "MiaoliCounty"
-msgstr ""
-
-msgid "TaichungCity"
-msgstr ""
-
-msgid "NantouCounty"
-msgstr ""
-
-msgid "ChanghuaCounty"
-msgstr ""
-
-msgid "YunlinCounty"
-msgstr ""
-
-msgid "ChiayiCity"
-msgstr ""
-
-msgid "ChiayiCounty"
-msgstr ""
-
-msgid "TainanCity"
-msgstr ""
-
-msgid "KaohsiungCity"
-msgstr ""
-
-msgid "PingtungCounty"
-msgstr ""
-
-msgid "YilanCounty"
-msgstr ""
-
-msgid "HualienCounty"
-msgstr ""
-
-msgid "TaitungCounty"
-msgstr ""
-
-msgid "PenghuCounty"
-msgstr ""
-
-msgid "LenchiangCounty"
-msgstr ""
-
-msgid "KinmenCounty"
 msgstr ""
 
