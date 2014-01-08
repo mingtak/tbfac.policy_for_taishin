@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<portlets
+  xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+  i18n:domain="tbfac.policy">
+
+  <!-- Portlet type registrations -->
+
+  <portlet
+    addview="portlets.InfoSearch"
+    title="Info Search Portlet"
+    description="A portlet for searching Info items by locations."
+    i18n:attributes="title title_info_search;
+                     description description_info_search" />
+
+</portlets>

@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-01-03 13:56+0000\n"
+"POT-Creation-Date: 2014-01-08 08:03+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,10 @@ msgstr ""
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: tbfac.policy\n"
+
+#: ./portlets/infosearch.py:50
+msgid "Info Search"
+msgstr ""
 
 #: ./browser/recent-comments.pt:12
 msgid "Latest Comments"
@@ -42,6 +46,11 @@ msgstr ""
 msgid "comment_on"
 msgstr ""
 
+#. Default: "A portlet for searching Info items by locations."
+#: ./profiles/default/portlets.xml
+msgid "description_info_search"
+msgstr ""
+
 #. Default: "Read More…"
 #: ./skins/tbfac_policy/folder_info_view.pt:90
 msgid "read_more_info"
@@ -52,5 +61,10 @@ msgstr ""
 #: ./skins/tbfac_policy/folder_quarterly_view.pt:53
 #: ./skins/tbfac_policy/folder_review_view.pt:53
 msgid "read_more_talk"
+msgstr ""
+
+#. Default: "Info Search Portlet"
+#: ./profiles/default/portlets.xml
+msgid "title_info_search"
 msgstr ""
 

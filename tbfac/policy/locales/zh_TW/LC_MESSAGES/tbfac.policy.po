@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: tbfac.policy\n"
-"POT-Creation-Date: 2014-01-03 13:56+0000\n"
+"POT-Creation-Date: 2014-01-08 08:03+0000\n"
 "PO-Revision-Date: 2014-01-03 22:12+0800\n"
 "Last-Translator: TsungWei Hu <marr.tw@gmail.com>\n"
 "Language-Team: Plone I18N <plone-i18n@lists.sourceforge.net>\n"
@@ -13,6 +13,10 @@ msgstr ""
 "Language-Name: Traditional Chinese\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: tbfac.polciy\n"
+
+#: ./portlets/infosearch.py:50
+msgid "Info Search"
+msgstr "展演資訊搜尋"
 
 #: ./browser/recent-comments.pt:12
 msgid "Latest Comments"
@@ -39,6 +43,11 @@ msgstr "張貼者："
 msgid "comment_on"
 msgstr "回應："
 
+#. Default: "A portlet for searching Info items by locations."
+#: ./profiles/default/portlets.xml
+msgid "description_info_search"
+msgstr "依展演地點、展演時間搜尋。"
+
 #. Default: "Read More…"
 #: ./skins/tbfac_policy/folder_info_view.pt:90
 msgid "read_more_info"
@@ -50,4 +59,9 @@ msgstr "閱讀全文…"
 #: ./skins/tbfac_policy/folder_review_view.pt:53
 msgid "read_more_talk"
 msgstr "更多討論…"
+
+#. Default: "Info Search Portlet"
+#: ./profiles/default/portlets.xml
+msgid "title_info_search"
+msgstr "展演資訊搜尋"
 
