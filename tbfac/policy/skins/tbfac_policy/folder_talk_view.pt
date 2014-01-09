@@ -10,7 +10,8 @@
 
 <metal:description fill-slot="content-description">
 
-<div class="posticon">
+<div class="posticon"
+ tal:condition="python: 'event/talks' in context.absolute_url()">
 <a href="#"
    tal:attributes="href string:${portal_url}/event/talks/++add++tbfac.Article">
 <img src="#"
