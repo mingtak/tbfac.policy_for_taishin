@@ -1,10 +1,11 @@
 <!-- AddThis Button BEGIN -->
 <tal:block tal:condition="view/available">
-<div class="addthis_toolbox addthis_default_style" id="socialtools"
-     i18n:domain="collective.addthis" tal:define="chicklets view/chicklets">
+<div id="socialtools" class="addthis_toolbox addthis_default_style"
+ tal:define="chicklets view/chicklets"
+ i18n:domain="tbfac.policy">
   <tal:addthis-button tal:condition="view/addthis_button_visible">
     <a href="#" class="addthis_button_compact"
-       tal:attributes="href view/getAddThisURL" i18n:translate="">Share</a>
+     tal:attributes="href view/getAddThisURL" i18n:translate="">Share</a>
     <span class="addthis_separator">|</span>
   </tal:addthis-button>
   <tal:chicklet-block repeat="chicklet chicklets">
@@ -20,7 +21,7 @@
   <span class="addthis_separator">|</span>
   <tal:v-counts define="v_counts context/v_counts|string:0;
                         fb_counts context/fb_counts|string:0">
-    <tal:field i18n:translate="">瀏覽數</tal:field>:
+    <tal:field i18n:translate="v_counts">Visits</tal:field>:
     <span tal:replace="python:int(v_counts) + int(fb_counts)" />
   </tal:v-counts>
   <!-- v_counts display end -->

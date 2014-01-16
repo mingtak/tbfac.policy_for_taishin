@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-01-08 08:03+0000\n"
+"POT-Creation-Date: 2014-01-16 10:04+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,6 +25,10 @@ msgstr ""
 msgid "Latest Comments"
 msgstr ""
 
+#: ./overrides/collective.addthis.addthis.pt:7
+msgid "Share"
+msgstr ""
+
 #: ./skins/tbfac_policy/folder_combined_view.pt:51
 #: ./skins/tbfac_policy/folder_quarterly_view.pt:37
 #: ./skins/tbfac_policy/folder_review_view.pt:37
@@ -32,12 +36,12 @@ msgid "at"
 msgstr ""
 
 #. Default: "Author:"
-#: ./skins/tbfac_policy/folder_talk_view.pt:53
+#: ./skins/tbfac_policy/folder_talk_view.pt:54
 msgid "author_forum"
 msgstr ""
 
 #. Default: "Author:"
-#: ./skins/tbfac_policy/folder_talk_view.pt:52
+#: ./skins/tbfac_policy/folder_talk_view.pt:53
 msgid "author_talk"
 msgstr ""
 
@@ -66,5 +70,10 @@ msgstr ""
 #. Default: "Info Search Portlet"
 #: ./profiles/default/portlets.xml
 msgid "title_info_search"
+msgstr ""
+
+#. Default: "Visits"
+#: ./overrides/collective.addthis.addthis.pt:24
+msgid "v_counts"
 msgstr ""
 
