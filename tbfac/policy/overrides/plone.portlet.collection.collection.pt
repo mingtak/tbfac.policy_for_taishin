@@ -38,8 +38,10 @@
              Author
             </tal:author>
             <tal:date condition="view/data/show_dates"
-             tal:content="python:toLocalizedTime(obj.Date)">
-                Date
+             tal:content="python:toLocalizedTime(obj.getObject().firstTimePublishDate)
+                          if hasattr(obj.getObject(), 'firstTimePublishDate')
+                          else toLocalizedTime(obj.Date)">
+             Date
             </tal:date>
             </span>
         </a>
