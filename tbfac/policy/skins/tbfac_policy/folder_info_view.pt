@@ -12,7 +12,7 @@
 
 <div class="posticon">
 <a href="#"
-   tal:attributes="href string:${portal_url}/post">
+   tal:attributes="href string:${portal_url}/event/info/++add++tbfac.Info">
 <img src="#"
    tal:attributes="src string:${portal_url}/++resource++add-info.jpg" /></a>
 </div>
@@ -45,10 +45,14 @@ Generic KSS Description. Is rendered with class="documentDescription".
         </span>
 
         <tal:info condition="python: item_type == 'tbfac.Info'">
-          <span style="float: left; margin: 0 1em 0.5em 0;"
-           tal:condition="item_obj/image">
+          <span style="float: left; margin: 0 1em 0.5em 0;">
             <img tal:define="scale item_obj/@@images"
+                 tal:condition="python:hasattr(scale.scale('image'), 'tag')"
                  tal:replace="structure python: scale.scale('image', width=170, height=170).tag()" />
+
+            <img tal:define="scale item_obj/@@images"
+                 tal:condition="python:not hasattr(scale.scale('image'), 'tag')"
+                 src="/leadimage1/image" width=170 height=170 />
           </span>
         </tal:info>
 <span class="line-space">&nbsp;</span>
