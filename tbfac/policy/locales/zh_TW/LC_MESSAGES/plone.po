@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
 "POT-Creation-Date: 2013-04-21 04:40+0000\n"
-"PO-Revision-Date: 2013-04-21 12:46+0800\n"
+"PO-Revision-Date: 2015-01-04 14:26+0800\n"
 "Last-Translator: TsungWei Hu <marr.tw@gmail.com>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -17,7 +17,7 @@ msgstr ""
 #. Default: "Used in item listings and search results."
 #: Archetypes/ExtensibleMetadata.py:97
 msgid "help_description"
-msgstr "可當作標題的補充文字。"
+msgstr "可當作標題的補充文字，請勿超過50字。"
 
 #. Default: "Home page"
 #: CMFPlone/skins/plone_deprecated/personalize_form.cpt:212
@@ -55,3 +55,18 @@ msgstr "位置:"
 msgid "text_searchitem_period"
 msgstr "展演期間:"
 
+#. Default: "You are now logged in"
+#: CMFPlone/skins/plone_login/login_success.pt:31
+msgid "heading_you_are_now_logged_in"
+msgstr '你現在已經登入'
+
+#. Default: "You can log in again below."
+#: CMFPlone/skins/plone_login/logged_out.cpt:28
+#: plone.app.openid/plone/app/openid/skins/ploneopenid/logged_out.cpt:45
+msgid "description_loginagain"
+msgstr '可利用下列連結再次登入，或再次以<a href="/@@facebook-login"><strong style="color:blue">facebook登入</strong></a>。'
+
+#. Default: "Continue to the ${portal_title} home page"
+#: CMFPlone/skins/plone_login/login_success.pt:55
+msgid "label_login_continue_to_home_page"
+msgstr "<a href='/event/info/++add++tbfac.Info' style='color:blue'>刊登展演資訊</a>"
