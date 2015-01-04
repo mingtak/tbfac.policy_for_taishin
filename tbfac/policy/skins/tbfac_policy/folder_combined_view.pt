@@ -9,12 +9,15 @@
 <body>
 
 <metal:header fill-slot="header"
- tal:define="jury python: context.absolute_url()[-3:];
+ tal:define="jury python: context.absolute_url().split('/')[-1];
              is_12 python: jury in ['whw','lyp','hyf','ljy'];
-             is_13 python: jury in ['ccf','ccy','kcl','chh','klt'];
-             is_bo python: jury in ['ljs','cts','chj','jhl'];">
+             is_13 python: jury in ['ccf','ccy'];
+             is_14 python: jury in ['ymy', 'linp', 'ssy', 'frq', 'chm'];
+             is_23 python: jury in ['ljs','cts','chj'];
+             is_34 python: jury in ['chh','klt','kcl'];
+             is_234 python: jury in ['jhl'];">
 <div class="nomi-year-info">
-第 <span tal:replace="string:12" tal:condition="is_12" /><span tal:replace="string:13" tal:condition="is_13" /><span tal:replace="string:12, 13" tal:condition="is_bo" /> 屆提名觀察人
+第 <span tal:replace="string:12" tal:condition="is_12" /><span tal:replace="string:13" tal:condition="is_13" /><span tal:replace="string:14" tal:condition="is_14" /><span tal:replace="string:12, 13" tal:condition="is_23" /><span tal:replace="string:13, 14" tal:condition="is_34" /><span tal:replace="string:12, 13, 14" tal:condition="is_234" /> 屆提名觀察人
 </div>
 <div class="leadImageContainer">
 <img tal:attributes="src string:${portal_url}/++resource++tbfac.theme/${jury}.jpg;
