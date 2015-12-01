@@ -14,6 +14,17 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: plone\n"
 
+
+msgid "Advisor"
+msgstr "提名觀察人"
+
+msgid "Guider"
+msgstr "特約作者"
+
+msgid "Writer"
+msgstr "身心靈快藝通"
+
+
 #. Default: "Used in item listings and search results."
 #: Archetypes/ExtensibleMetadata.py:97
 msgid "help_description"
@@ -64,7 +75,7 @@ msgstr '你現在已經登入'
 #: CMFPlone/skins/plone_login/logged_out.cpt:28
 #: plone.app.openid/plone/app/openid/skins/ploneopenid/logged_out.cpt:45
 msgid "description_loginagain"
-msgstr '可利用下列連結再次登入，或再次以<a href="/@@facebook-login"><strong style="color:blue">facebook登入</strong></a>。'
+msgstr '可利用下列連結再次登入，或再次以<a href="/facebookLogin"><strong style="color:blue">facebook登入</strong></a>。'
 
 #. Default: "Continue to the ${portal_title} home page"
 #: CMFPlone/skins/plone_login/login_success.pt:55

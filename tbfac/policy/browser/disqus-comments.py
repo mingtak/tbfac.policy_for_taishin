@@ -8,23 +8,26 @@ class RecentCommentsView(BrowserView):
         """Returns list of latest comments"""
         comments = []
         posts, threads = getLatestComments(self.context)
-        for c in posts:
-            thread_id = c.get('thread', '')
+        for cc in posts:
+            thread_id = cc.get('thread', '')
             thread = {}
             if thread_id and thread_id in threads:
                 thread = {
                     'title': threads[thread_id].get('title', 'No Title'),
                     'url': threads[thread_id].get('link', ''),
                 }
-            body = c.get('raw_message', '')
+            body = cc.get('raw_message', '')
             if len(body) > 30:
                 body = body[:30] + '...'
+#            import pdb; pdb.set_trace()
+            if not thread.get('url', ''):
+                continue
             comments.append({
-                'author': c.get('author', {}).get('name', 'Anonymous'),
-                'date': c.get('createdAt', ''),
+                'author': cc.get('author', {}).get('name', 'Anonymous'),
+                'date': cc.get('createdAt', ''),
                 'body': body,
                 'thread': thread,
-                'url': '%s#comment-%s' % (thread.get('url', ''), c.get('id',
+                'url': '%s#comment-%s' % (thread.get('url', ''), cc.get('id',
                     '')),
             })
         return comments

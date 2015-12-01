@@ -32,7 +32,7 @@ Generic KSS Description. Is rendered with class="documentDescription".
       <metal:block use-macro="context/folder_listing/macros/entries">
         <metal:entry fill-slot="entry">
         <div class="tileItem visualIEFloatFix"
-         tal:define="item_obj item/getObject;">
+         tal:define="item_obj item/getObject">
 
         <div tal:replace="structure item_obj/@@addthis_listing_item_buttons" />
 
@@ -52,7 +52,16 @@ Generic KSS Description. Is rendered with class="documentDescription".
           <span class="documentAuthor">
           <tal:field i18n:translate="author_talk" condition="python: not is_forum">Author:</tal:field>
           <tal:field i18n:translate="author_forum" condition="is_forum">Author:</tal:field>
-          <span tal:replace="item_obj/author">Name</span>
+<!--          <span tal:replace="item_obj/author">Name</span>
+          <span tal:replace="python:item.id">Name</span>
+-->
+
+  <span tal:condition="python:item.getObject().relatedProfile and item.Creator != 'admin'" tal:replace="python:'%s,' %
+                              item.getObject().relatedProfile.to_object.Title()">Name</span>
+
+  <span tal:condition="python:not item.getObject().relatedProfile or item.Creator == 'admin'" tal:replace="python:'%s,' % 
+                              item.getObject().author">Name</span>
+
           </span>
           &mdash;
           <span class="documentModified">
